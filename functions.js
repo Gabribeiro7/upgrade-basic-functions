@@ -38,11 +38,11 @@ function findLongestWord(param) {
 console.log(findLongestWord(avengers));
 
 
-// **Iteración #3: Calcular la suma**
+//*? **Iteración #3: Calcular la suma**
 
-// Calcular una suma puede ser tan simple como iterar sobre un array y sumar cada uno de los elementos.
-// Implemente la función denominada sumNumbers que toma un array de números como argumento y devuelve 
-// la suma de todos los números de la matriz.
+//*? Calcular una suma puede ser tan simple como iterar sobre un array y sumar cada uno de los elementos.
+//*? Implemente la función denominada sumNumbers que toma un array de números como argumento y devuelve 
+//*? la suma de todos los números de la matriz.
 
 const numbers = [1, 2, 3, 5, 45, 37, 58];
 
@@ -59,7 +59,7 @@ console.log(sumAll(numbers));
 
 // **Iteración #4: Calcular el promedio**
 
-// Calcular un promedio es una tarea extremadamente común. Puedes usar este array para probar tu función:
+//*? Calcular un promedio es una tarea extremadamente común. Puedes usar este array para probar tu función:
 
 const numbers1 = [12, 21, 38, 5, 45, 37, 6];
 function average(array) {
@@ -76,4 +76,29 @@ function average(array) {
   
 }
 console.log(average(numbers1));
+
+//*? **Iteración #5: Calcular promedio de strings**
+
+//*? Crea una función que reciba por parámetro un array y cuando es un valor 
+//*? number lo sume y de lo contrario cuente la longitud del string y lo sume.
+
+const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub'];
+function averageWord(array) {
+  let numbers = 0;
+  let words = 0;
+
+  for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    if (typeof element === "number") {
+      numbers += element
+    }
+    else {
+      typeof element === "string"
+       words += element.length
+    }
+  }
+  return console.log("La suma de los numeros es igual a " + numbers + " y la suma de la longitud de las palavras es igual a " + words); 
+  
+}
+averageWord(mixedElements);
 
