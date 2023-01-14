@@ -121,8 +121,6 @@ const duplicates = [
   'soda'
 ];
 
-
-
 function removeDuplicates(array) {
   
   for (let i = 0; i < array.length; i++) {
@@ -159,11 +157,46 @@ const nameFinder = [
 ];
 function finderName(array , doesItExist) {
   for (let i = 0; i < array.length; i++) {
-    if (array[i]=== doesItExist){
-      return console.log(true, i);
+    if (array[i] === doesItExist) {
+       return i;
     }
-    
   }
-  return console.log(false);
+  return false;
 }
-finderName(nameFinder, "Xabier");
+let result = finderName(nameFinder, 'Marc');
+console.log(result);
+
+//*? **Iteration #8: Contador de repeticiones**
+
+//*? Crea una función que nos devuelva el número de veces que se repite cada una de las palabras que lo conforma.
+
+const counterWords = [
+  'code',
+  'repeat',
+  'eat',
+  'sleep',
+  'code',
+  'enjoy',
+  'sleep',
+  'code',
+  'enjoy',
+  'upgrade',
+  'code'
+];
+
+function repeatCounter(array) {
+  let numberOfTimes = [];
+  let counter = 0;
+  for (let i = 0; i < array.length; i++) {
+    
+    for (let j = 0; j < array.length; j++) {
+      array [i] === array[j] && counter ++; 
+      } 
+     
+    numberOfTimes[array[i]]= counter;
+    counter = 0;
+   }
+   return numberOfTimes;
+
+} 
+console.log(repeatCounter(counterWords));
